@@ -14,5 +14,36 @@ After creating the app we will need to save these keys locally in a secure folde
 - **Access Token**
 - **Access Token Secret**
 
+**Tuto**
+
+The difference between the 4 concepts:
+- API Key and API Key Secret
+  Purpose: To authenticate the application.
+  Usage: For the application's global requests to the API.
+
+-Access Token and Access Token Secret:
+  Purpose: To authenticate the user.
+  Usage: For requests that require user permissions (such as reading or writing tweets).
+
+-Example of Use
+When you make a request to the Twitter API:
+
+- Application Authentication:
+
+Use the API Key and API Key Secret to authenticate your application.
+User Authentication:
+
+Use the Access Token and Access Token Secret to authenticate the user and access their data and permissions.
+
+
+Then we will be installing our packages using the prompt command in Windows :
+
+```
+pip3 install pandas
+pip3 install tweepy
+pip3 install s3fs
+
+```
+
 
 
