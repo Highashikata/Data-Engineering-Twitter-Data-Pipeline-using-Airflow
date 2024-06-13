@@ -5,7 +5,7 @@ in order to build a data pipeline by extarcting data from twitter using the ```t
 
 So we are going to get data from Twitter and transform it in Airflow using Python (Deployed in AWS EC2 instance) and then stored in the AWS S3.
 
-We will begin by creating an account in X(ex Twitter) then go to [Twitter Developper Portal](https://help.twitter.com/en/forms/platform](https://developer.x.com/en/portal/projects))
+We will begin by creating an account in X(ex Twitter) then go to [Twitter Developper Portal](https://developer.x.com/en/portal/dashboard)
 in order to create our project and apps.
 
 After creating the app we will need to save these keys locally in a secure folder :
@@ -42,7 +42,6 @@ Then we will be installing our packages using the prompt command in Windows :
 pip3 install pandas
 pip3 install tweepy
 pip3 install s3fs
-
 ```
 
 
