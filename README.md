@@ -70,13 +70,12 @@ pip3 install s3fs
 python twitter-ETL.py
 ```
 
+After searching the new updates of the Twitter API, with the free version of X Developer we have a limited requies that we can make.
 
-When we launch the Python script, we found the following error:
+### Updates of the Project
+During the project developpement, we've met a 'problem' related to limited queries access with the Free access Twitter API.
 
-![image](https://github.com/Highashikata/Data-Engineering-Twitter-Data-Pipeline-using-Airflow/assets/96960411/d7222082-9d10-4484-a9f3-17c2bc62658f)
-
-after searching the new updates of the Twitter API, with the free version of X Developer we have a limited requies that we can make.
-
-
+So we've downloaded trump tweets from this website [Twitter Dataset](https://data.world/lovesdata/trump-tweets-5-4-09-12-5-16).
+And now we're gonna develop the pipeline based on these data.
 
 
