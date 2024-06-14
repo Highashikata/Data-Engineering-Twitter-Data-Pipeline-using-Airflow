@@ -44,5 +44,39 @@ pip3 install tweepy
 pip3 install s3fs
 ```
 
+#### Creating a virtual environment 
+
+We will proceed instead by creating a virtual environment.
+
+1. Creating a virtual environment
+```
+python -m venv myenv
+```
+2. Then we will activate the VE
+```
+myenv\Scripts\activate  # On Windows
+source myenv/bin/activate  # On macOS/Linux
+```
+
+3. Finally installing the required packages
+```
+pip3 install pandas
+pip3 install tweepy
+pip3 install s3fs
+```
+
+4. Launching the Python script
+```
+python twitter-ETL.py
+```
+
+
+When we launch the Python script, we found the following error:
+
+![image](https://github.com/Highashikata/Data-Engineering-Twitter-Data-Pipeline-using-Airflow/assets/96960411/d7222082-9d10-4484-a9f3-17c2bc62658f)
+
+after searching the new updates of the Twitter API, with the free version of X Developer we have a limited requies that we can make.
+
+
 
 
