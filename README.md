@@ -73,9 +73,57 @@ python twitter-ETL.py
 After searching the new updates of the Twitter API, with the free version of X Developer we have a limited requies that we can make.
 
 ### Updates of the Project
+
 During the project developpement, we've met a 'problem' related to limited queries access with the Free access Twitter API.
 
 So we've downloaded trump tweets from this website [Twitter Dataset](https://data.world/lovesdata/trump-tweets-5-4-09-12-5-16).
 And now we're gonna develop the pipeline based on these data.
+
+#### Creating AWS EC2 instance
+We're going to create an EC2 instance in order to Launch Airflow on it.
+
+We are going to create an IAM User that (we're not gonna be working with the Root account).
+EC2 Config:
+- Amazon Machine Image : Amazon Linux 2 AMI(HVM).
+- Instance Type : t2.micro.
+- Security Group: Allowing SSH traffic, HTTP traffic.
+- Key Pair : Creating a new key pair RSA (.pem).
+
+Then we move on the directory where our Key Pair is downloaded and we execute the following command:
+
+```
+ssh -v -i "C:\Users\UserName\..\Twitter-data-pipeline-key-pair.pem" ec2-user@your-ec2-public-ip
+
+```
+
+Remark: we can get a connection timed out when launching this command, if we obtain that problem we will need to verify our EC2 instance Public IP and the Inbound rules of our security group.
+
+#### Installing Apache Airflow
+
+##### Step 1: First, update the packages installed on your EC2 instance. 
+```
+sudo yum update -y
+```
+
+##### Step 2: Install Python 3, pip and other necessary tools.
+```
+sudo yum install -y python3 python3-pip
+sudo yum install -y git
+```
+
+##### Step 3:  Install Apache Airflow
+```
+pip3 install apache-airflow
+pip3 install apache-airflow-providers-amazon
+pip3 install boto3
+pip3 install pandas
+```
+
+#### Step 4: launching Airflow 
+```
+airflow standalone      
+```
+
+
 
 
